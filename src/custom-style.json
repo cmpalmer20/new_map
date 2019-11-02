@@ -6,26 +6,20 @@
     			"type": "FeatureCollection",
     			"features": []
     		}
-    	}
-    },
-    "neighborhoods": {
-    	"type": "geojson",
+    	},
+	    "neighborhoods": {
+    		"type": "geojson",
     		"data": {
     			"type": "FeatureCollection",
     			"features": []
+    		}
+    	}
     },
 
 
-    "layers": [
-    	{
-    		"id": "sites",
-    		"type": "circle",
-    		"source": "sites",
-    		"paint": {
-    			"circle-color": "blue"
-    		}
 
-    	},
+    "layers": [										
+
     	{
     		"id": "neighborhoods",
     		"type": "fill",
@@ -34,7 +28,26 @@
     			"fill-color": "rgba(94, 164, 198, 0.79)"
     		}
 
+    	},
+    	{
+    		"id": "neighborhoods-outline",
+    		"type": "line",
+    		"source": "neighborhoods",
+    		"paint": {
+    			"line-color": "rgb(94, 164, 198)",
+    			"line-width": 3
+    		}
+    	},
+    	{
+    		"id": "sites",
+    		"type": "circle",
+    		"source": "sites",
+    		"paint": {
+    			"circle-color": "blue"
+    		}
+
     	}
+
 
     ]
 }
