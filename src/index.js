@@ -7,8 +7,8 @@ import custom from "./custom-style.json";
 let map;
 
 async function init() {										// async function lets you use the await operator
-	const sites = await import("../data/sites.json");
-	const neighborhoods = await import("../data/neighborhoods.json");
+	const output = await import("../data/output.json");
+
     const style = map.getStyle();
 
     style.sources = {
@@ -18,8 +18,8 @@ async function init() {										// async function lets you use the await operat
     style.layers.push(...custom.layers);
     map.setStyle(style);
 
-    map.getSource("sites").setData(sites);				// the sites object in custom-style.json
-    map.getSource("neighborhoods").setData(neighborhoods);
+
+    map.getSource("output").setData(output);
 }
 
 mapboxgl.accessToken = settings.accessToken;
